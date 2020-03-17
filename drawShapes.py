@@ -110,7 +110,7 @@ class Cube:
 textures = []
 
 class Plane:
-    def __init__ (self, fromToX = [], fromToY = [], fromToZ = [], colorRGBA = [], texture = "", repeat = 1):
+    def __init__ (self, fromToX = [], fromToY = [], fromToZ = [], colorRGBA = [], texture = "", repeatX = 1, repeatY = 1):
         self.fromToX = fromToX
         self.fromToY = fromToY
         self.fromToZ = fromToZ
@@ -120,7 +120,8 @@ class Plane:
         if (self.texture != ""):       
             self.textureID = loadTexture(self.texture)
         
-        self.repeat = repeat
+        self.repeatX = repeatX
+        self.repeatY = repeatY
         glEnable(GL_BLEND)
         glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA)
         
@@ -148,13 +149,13 @@ class Plane:
         glBegin(GL_QUADS)
        
        
-        glTexCoord2f(0.0, 1.0 * self.repeat)
+        glTexCoord2f(0.0, 1.0 * self.repeatX)
         glVertex3f(self.fromToX[0], self.fromToY[0], self.fromToZ[0])
         glTexCoord2f(0.0, 0.0)
         glVertex3f(self.fromToX[1], self.fromToY[0], self.fromToZ[0])
-        glTexCoord2f(1.0 * self.repeat, 0.0)
+        glTexCoord2f(1.0 * self.repeatY, 0.0)
         glVertex3f(self.fromToX[1], self.fromToY[1], self.fromToZ[1])
-        glTexCoord2f(1.0 * self.repeat, 1.0 * self.repeat)
+        glTexCoord2f(1.0 * self.repeatY, 1.0 * self.repeatX)
         glVertex3f(self.fromToX[0], self.fromToY[1], self.fromToZ[1])
         glEnd()
         glPopMatrix()
@@ -174,13 +175,18 @@ class Plane:
                   self.colorRGBA[3])
         glBegin(GL_QUADS)
        
-        glTexCoord2f(0.0, 1.0 * self.repeat)
+        glTexCoord2f(0.0, 1.0 * self.repeatX)
         glVertex3f(self.fromToX[0], self.fromToY[0], self.fromToZ[0])
+
         glTexCoord2f(0.0, 0.0)
         glVertex3f(self.fromToX[1], self.fromToY[1], self.fromToZ[0])
-        glTexCoord2f(1.0 * self.repeat, 0.0)
+        
+        glTexCoord2f(1.0 * self.repeatY, 0.0)
+        #glTexCoord2f(2, 0.0)
         glVertex3f(self.fromToX[1], self.fromToY[1], self.fromToZ[1])
-        glTexCoord2f(1.0 * self.repeat, 1.0 * self.repeat)
+
+        #glTexCoord2f(1.0 * self.repeat, 1.0 * self.repeat)
+        glTexCoord2f(1.0 * self.repeatY, 1.0 * self.repeatX)
         glVertex3f(self.fromToX[0], self.fromToY[0], self.fromToZ[1])
         glEnd()
         glPopMatrix()

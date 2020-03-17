@@ -16,8 +16,8 @@ from numpy.linalg import inv
 
 
 pygame.init()
-#display = (1280, 720)
-display = (640, 480)
+display = (1280, 720)
+#display = (640, 480)
 screen = pygame.display.set_mode(display, pygame.OPENGL|pygame.DOUBLEBUF)
 
 
@@ -83,7 +83,8 @@ for line in Lines:
                       [float(l[5]), float(l[6])],
                       [float(l[7]), float(l[8]), float(l[9]), float(l[10])],
                       l[11],
-                      float(l[12]))
+                      float(l[12]),
+                      float(l[13]))
 
         scenarioWall.append(planeWall)
 
@@ -94,7 +95,8 @@ for line in Lines:
                       [float(l[5]), float(l[6])],
                       [float(l[7]), float(l[8]), float(l[9]), float(l[10])],
                       l[11],
-                      float(l[12]))
+                      float(l[12]), 
+                      float(l[13]))
 
         scenarioGroundRoof.append(planeGR)
 
@@ -353,8 +355,8 @@ while run:
                                         i[3])
                 
                 i[0].drawPlaneWalls()
-                print(i[0].getLocalization())
-                print('\n')
+                #print(i[0].getLocalization())
+                #print('\n')
                 if (global_time > i[4] + i[5]):
                     del(bullets[count])
                 
@@ -370,6 +372,7 @@ while run:
             
         glPopMatrix()
 
+        '''
         # gun
         glPushMatrix()
         glLoadIdentity()  
@@ -379,10 +382,10 @@ while run:
         planeGun.drawPlaneGround()
         #planeGun.updateLocalization(-10, -1.0, -9)
         #print(planeGun.getLocalization())
-
+        
 
         glPopMatrix()
-
+        '''
           
 
         glPopMatrix()
@@ -394,11 +397,11 @@ while run:
         pygame.display.flip()
         #pygame.time.wait(10)
 
-        '''
+        
         #clock.tick()
         fps = clock.get_fps()
         print("fps: " + str(fps))
-        '''
+        
 
 pygame.quit()
 
