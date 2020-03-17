@@ -1,17 +1,19 @@
 pp 10 3 e
 
-w 10 30 0 0 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 30 50 0 0 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 50 50 0 20 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 50 50 20 40 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 50 30 40 40 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 30 10 40 40 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w 10 -10 40 40 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w -10 -10 40 20 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
-w -10 -10 20 0 -2 8 1 1 1 1 archs/textures/tiles/textura.png 3 e
+w 15 18 0 0 -2 3 1 1 1 1 archs/textures/tiles/doorText.png 1 e
+w 10 30 0 0 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 30 50 0 0 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 50 50 0 20 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 50 50 20 40 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 50 30 40 40 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 30 10 40 40 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w 10 -10 40 40 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w -10 -10 40 20 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
+w -10 -10 20 0 -2 6 1 1 1 1 archs/textures/tiles/woodText.png 7 e
 
-gr -50 50 -50 50 -2 -2 1 1 1 1 archs/textures/tiles/concrete.png 8 e 
-gr -50 50 -50 50 8 8 1 1 1 1 archs/textures/tiles/concrete.png 8 e
+
+gr -50 50 -50 50 -2 -2 1 1 1 1 archs/textures/tiles/grassText.png 25 e 
+gr -50 50 -50 50 6 6 1 1 1 1 archs/textures/tiles/concrete.png 8 e
 
 o
 o
