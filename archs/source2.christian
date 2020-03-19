@@ -1,0 +1,49 @@
+pp 0 1 e
+
+w 0 10 0 0 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 0 -10 0 0 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10 10 0 35 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w -10 -10 0 20 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10 -14 42 42 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// paredes lavabo
+w -10 -10.5 20 20 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w -10.5 -10.5 20 10 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w -10.5 -14 10 10 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w -14 -14 10 30 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// paredes corredor
+w 10 10.5 35 35 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10.5 10.5 35 10 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10 10 40 65 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10 10.5 40 40 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 10.5 10.5 40 65 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// paredes quarto eu
+w 10.5 25 65 65 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 25 25 65 55 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e
+w 25 15 55 55 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e  
+w 15 15 55 54.5 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 15 25 54.5 54.5 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 25 25 54.5 50 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 25 15 50 50 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// corredor de novo
+w 15 15 50 30 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// quarto do meio
+w 15 15.5 30 30 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 15.5 15.5 30 45 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 15.5 25 45 45 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 25 25 30 45 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+w 25 15 45 45 -2 4 1 1 1 1 archs/textures/tiles/textura.png 7 7 e 
+
+// quarto dos pais
+
+
+
+gr -100 100 -100 100 -2 -2 1 1 1 1 archs/textures/tiles/white.jpg 1 1 e 
+gr -100 100 -100 100 4 4 1 1 1 1 archs/textures/tiles/white.jpg 1 1 e
+
+o archs/objects/cube.obj 0 0 0 archs/textures/tiles/textura.png e
+

@@ -339,8 +339,8 @@ class ObjLoader(object):
         glTranslate(self.localization[0], self.localization[1], self.localization[2])
         glBindTexture(GL_TEXTURE_2D,textureID)
         
-        self.ang += 45
-        glRotatef(self.ang,0,0,1)
+        #self.ang += 45
+        #glRotatef(self.ang,0,0,1)
 
         glBegin(GL_QUADS)
         for face in self.quad_faces:

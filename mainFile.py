@@ -73,6 +73,7 @@ Lines = f.readlines()
 
 scenarioWall = []
 scenarioGroundRoof = []
+objectsScene = []
 
 for line in Lines:
     l = line.split(" ")
@@ -105,6 +106,17 @@ for line in Lines:
         playerPositionX = float(l[1])
         playerPositionY = float(l[2])
     
+    if (l[0] == 'o'):
+        #print(l)
+        
+        obj = ObjLoader(l[1], [float(l[2]), float(l[3]), float(l[4])])
+        
+        
+        textureObj = loadTexture(l[5])
+        objectsScene.append([obj, textureObj])
+        
+
+        
 
 #-------------------- END OF LOAD .CHRISTIAN SOURCE --------------------#
 
@@ -137,8 +149,8 @@ ang = 1
 
 testSum = 0.1
 
-cubo = ObjLoader('cube.obj', [0, 0, 0])
-textureCubo = loadTexture('archs/textures/enemies/rubik.png')
+
+
 
 while run:
     for event in pygame.event.get():
@@ -311,7 +323,11 @@ while run:
         if (scenarioWall):
             for a in scenarioWall:
                 a.drawPlaneWalls()
-                        
+
+        if (objectsScene):
+            for a in objectsScene:
+                #a.render_scene()  
+                a[0].render_texture(a[1],((0,0),(1,0),(1,1),(0,1)))    
                 
         if (scenarioGroundRoof):
             for a in scenarioGroundRoof:
@@ -397,11 +413,11 @@ while run:
         pygame.display.flip()
         #pygame.time.wait(10)
 
-        
+        '''
         #clock.tick()
         fps = clock.get_fps()
         print("fps: " + str(fps))
-        
+        '''
 
 pygame.quit()
 
